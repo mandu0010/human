@@ -20,7 +20,7 @@ class Particle {
     let fd = new box2d.b2FixtureDef();
     // Fixture holds shape
     fd.shape = new box2d.b2CircleShape();
-    fd.shape.m_radius = scaleToWorld(this.r);
+    fd.shape.m_radius = scaleToWorld(this.r*2);
 
     // Some physics
     fd.density = 1.0;
@@ -76,7 +76,7 @@ class Particle {
     fill(this.col);
     stroke(200);
     strokeWeight(2);
-    ellipse(0, 0, this.r * 2, this.r * 2);
+    ellipse(0, 0, this.r * 4, this.r * 4);
     // Let's add a line so we can see the rotation
     // line(0, 0, this.r, 0);
     pop();
