@@ -1,7 +1,7 @@
 // The Nature of Code
 // Daniel Shiffman
 // http://natureofcode.com
-
+let img;
 // A reference to our box2d world
 let world;
 
@@ -12,9 +12,13 @@ let boundaries = [];
 
 let wall;
 
+function preload() {
+  img = loadImage('man.jpg');
+}
+
 function setup() {
   createCanvas(300, 700);
-
+  // background(img);
   // Initialize box2d physics and create the world
   world = createWorld();
 
@@ -32,7 +36,7 @@ function setup() {
 
 function draw() {
   background(51);
-
+  background(img);
   // We must always step through time!
   let timeStep = 1.0 / 30;
   // 2nd and 3rd arguments are velocity and position iterations
