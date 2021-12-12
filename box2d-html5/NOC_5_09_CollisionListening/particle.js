@@ -41,7 +41,7 @@ class Particle {
 
   // Change color when hit
   change() {
-    this.col = color(255, 0, 0);
+    this.col = color(50, 50, 50);
   }
 
   // This function removes the particle from the box2d world
@@ -74,8 +74,9 @@ class Particle {
     translate(pos.x, pos.y);
     rotate(a);
     fill(this.col);
-    stroke(200);
-    strokeWeight(2);
+    // stroke(0);
+    // strokeWeight(0);
+    noStroke();
     ellipse(0, 0, this.r * 4, this.r * 4);
     // Let's add a line so we can see the rotation
     // line(0, 0, this.r, 0);
